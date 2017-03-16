@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+<body class="pushmenu-push">
+  <nav class="pushmenu pushmenu-left">
+    <div id="nav_listClose">Close</div>  
+    <a href="#">Home</a>
+    <a href="#">Nav2</a>
+    <a href="#">Nav3</a>
+    <a href="#">Nav4</a>
+    <a href="#">Nav5</a>
+    <a href="#">Nav6</a>
+    <a href="#">Nav7</a>
+  </nav>
+  
+<div class="container">
+        <div class="main">
+        <section class="buttonset">
+            <div id="nav_list">Menu</div>   
+        </section>
+      
+    <header id="header" class="header header--fixed hide-from-print" role="banner">
+    <h1>Header</h1>
+    </header>
+
+    <section class="content-container">
+
+        <!-- Begin Banner -->
+        <div class="banner">
+            <div class="banner-image">
+            <ul id="slides">
+            <li class="slide showing"></li>
+            <li class="slide"><div class="container"><h1>A beacon of excellence for Catholic education.</h1></div></li>
+            <li class="slide"><div class="container"><h1>A beacon of excellence for Catholic education.</h1></div></li>
+            <li class="slide"><div class="container"><h1>A beacon of excellence for Catholic education.</h1></div></li>
+            <li class="slide"><div class="container"><h1>A beacon of excellence for Catholic education.</h1></div></li>
+            </ul>
+            </div>
+        </div>
+        <!-- End Banner -->
+
+        <!-- Begin Content -->
+        <div class="content">
+        <div class="content-holder">
+            <img src="img/home_content.jpg">
+        </div>
+        </div>
+        <!-- End form -->
+        <!-- End Content -->
+
+    </section><!-- End content-container -->
+  </div><!-- End Main -->
+</div><!-- End Container --> 
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/headroom.js"></script>
+        <script>
+        (function() {
+            var header = document.querySelector("#header");
+
+            if(window.location.hash) {
+              header.classList.add("headroom--unpinned");
+            }
+
+            var headroom = new Headroom(header, {
+                tolerance: {
+                  down : 10,
+                  up : 20
+                },
+                offset : 205
+            });
+            headroom.init();
+
+        }());
+        </script>
+
+
+</body>

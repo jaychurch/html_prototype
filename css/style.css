@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+}
+
+.header {
+    background-color: #333;
+}
+
+.header--fixed {
+    position:fixed;
+    z-index:10;
+    right:0;
+    left:0;
+    top:0
+}
+
+.headroom {
+    transition:transform .25s ease-in-out;
+    will-change:transform
+}
+.headroom--pinned {
+    transform:translateY(0)
+}
+.headroom--unpinned {
+    transform:translateY(-100%)
+}
+
+.pushmenu { /*this is the nav*/
+  background: #3c3933;
+  font-family: Arial, Helvetics, sans-serif;
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+  position:fixed;
+}
+
+.pushmenu h3 {
+  color: #cbbfad;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 15px 20px;
+  margin: 0;
+  background: #282522;    
+  height: 16px;
+}
+
+.pushmenu a {
+  display: block; /* drops the nav vertically*/
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-top: 1px solid #56544e;
+  border-bottom: 1px solid #312e2a;
+  padding: 14px;
+}
+
+.pushmenu a:hover {
+  background:#00A287;
+}
+
+.pushmenu a:active {
+  background: #454f5c;
+  color: #fff;
+}
+
+.pushmenu-left {
+  left: -240px;
+
+}
+
+.pushmenu-left.pushmenu-open {
+  left: 0;
+  width: 100%;
+}
+
+.pushmenu-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+
+.pushmenu-push-toright {
+  left: 240px;
+}
+
+/*Transition*/
+.pushmenu, .pushmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;  
+}
+
+#nav_list {
+  background: url(http://www.onlywebpro.com/demo/jquery/icon_nav.png) no-repeat left top;
+  cursor: pointer;
+  height: 27px;
+  width: 33px;
+  text-indent: -99999em;
+}
+
+nav-list.active {
+  background-position: -33px top;
+}
+
+ .buttonset {
+      background-color: #333;
+padding: 27px 20px 27px;
+ }
+
+.banner {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 658px;
+}
+
+.banner-image {
+    height: 100%;
+    width: 100%;
+}
+
+.banner + .content {
+        margin-top: 600px;
+    }
+
+.content {
+    line-height: 30px;
+    position: relative;
+    background: transparent;
+    z-index: 1;
+}
+
+.content-holder {
+    max-width: 1217px;
+    margin: 0 auto;
+}
+ 
+ section.content-container {
+    height: 4000px;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+
+ /*Slides*/
+/*Slider*/
+
+/*
+essential styles:
+these make the slideshow work
+*/
+#slides{
+    position: relative;
+    height: 658px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+
+.slide:nth-of-type(1){
+        height: 100%;
+    width: 100%;
+    background-image: url(img/slide1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.slide:nth-of-type(2){
+            height: 100%;
+    width: 100%;
+    background-image: url(img/slide2.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.slide:nth-of-type(3){
+           height: 100%;
+    width: 100%;
+    background-image: url(img/slide3.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.slide:nth-of-type(4){
+            height: 100%;
+    width: 100%;
+    background-image: url(img/slide4.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.slide:nth-of-type(5){
+           height: 100%;
+    width: 100%;
+    background-image: url(img/slide5.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+/*Media queries*/
+
+@media (max-width: 600px) {
+   header {
+    display: none;
+  }
+    .banner {
+    top: 80px;
+}
+}
+
+@media (min-width: 600px) {
+   section.buttonset {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
